@@ -25,12 +25,18 @@ export default class LoginScreen extends Component {
         <CustomTextBox placeholder="Password" showEye1 />
 
         <View style={styles.forgetViewStyle}>
-          <TouchableOpacity>
+          <TouchableOpacity
+            onPress={() =>
+              this.props.navigation.navigate('SellerForgetPasswordScreen')
+            }>
             <Text style={styles.forgetTextStyle}>Forget Password?</Text>
           </TouchableOpacity>
         </View>
         <View style={{height: 20}} />
-        <CustomButton text="Login" />
+        <CustomButton
+          text="Login"
+          onPress={() => this.props.navigation.navigate('SellerAllMealScreen')}
+        />
 
         <View style={styles.textMainViewStyle}>
           <View style={styles.leftTextViewStyle}>
@@ -38,7 +44,11 @@ export default class LoginScreen extends Component {
               Don't have an account?
             </Text>
           </View>
-          <TouchableOpacity style={styles.rightTextViewStyle}>
+          <TouchableOpacity
+            style={styles.rightTextViewStyle}
+            onPress={() =>
+              this.props.navigation.navigate('SellerSignUpScreen')
+            }>
             <Text style={{color: WHITE_COLOR, fontSize: SMALL}}>
               Create Account
             </Text>

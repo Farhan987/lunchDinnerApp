@@ -9,7 +9,13 @@ export default class AllMealScreen extends Component {
   render() {
     return (
       <Container style={styles.container}>
-        <CustomHeader showHeaderButton />
+        <CustomHeader
+          showHeaderButton
+          onPressMenu={() => this.props.navigation.toggleDrawer()}
+          onPressRightButton={() =>
+            this.props.navigation.navigate('SellerAddMealScreen')
+          }
+        />
         <Tabs tabBarUnderlineStyle={{backgroundColor: SCREEN_BG_COLOR}}>
           <Tab
             heading={

@@ -7,7 +7,7 @@ import CustomButton from '../../components/customComponents/customButton';
 import CustomTextBox from '../../components/customComponents/customTextbox';
 import CustomText from '../../components/customComponents/customText';
 
-export default class MenuDetailScreen extends Component {
+export default class AddMenuScreen extends Component {
   state = {toggleMode: false};
 
   toggle = () => {

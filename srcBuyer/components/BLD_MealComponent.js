@@ -58,19 +58,27 @@ export default class BLD_MealComponent extends Component {
                 justifyContent: 'center',
                 alignItems: 'center',
               }}>
-              <Button
-                rounded
+              <View
                 style={{
                   height: 25,
                   alignSelf: 'center',
                   backgroundColor: this.props.buttonBgColor
                     ? this.props.buttonBgColor
                     : Button_BG_COLOR,
+                  width: 80,
+                  borderRadius: 50,
+                  justifyContent: 'center',
+                  alignItems: 'center',
                 }}>
-                <Text style={{color: WHITE_COLOR, fontSize: EXTRA_SMALL}}>
+                <Text
+                  style={{
+                    color: WHITE_COLOR,
+                    fontSize: SMALL,
+                    paddingBottom: 2,
+                  }}>
                   {this.props.buttonText}
                 </Text>
-              </Button>
+              </View>
             </View>
           </View>
 
@@ -147,7 +155,9 @@ export default class BLD_MealComponent extends Component {
                   style={{
                     height: 25,
                     alignSelf: 'center',
-                    backgroundColor: 'green',
+                    backgroundColor: this.props.bgColor
+                      ? this.props.bgColor
+                      : 'green',
                   }}>
                   <Text style={{fontSize: EXTRA_SMALL, color: WHITE_COLOR}}>
                     {this.props.secondButtonText

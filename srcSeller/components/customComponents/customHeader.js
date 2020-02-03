@@ -19,7 +19,7 @@ export default class CustomHeader extends Component {
     return (
       <Header style={{backgroundColor: SCREEN_BG_COLOR}}>
         <Left>
-          <Button transparent>
+          <Button transparent onPress={this.props.onPressMenu}>
             <Icon name="menu" />
           </Button>
         </Left>
@@ -28,6 +28,7 @@ export default class CustomHeader extends Component {
         {this.props.showHeaderButton ? (
           <Right>
             <Button
+              onPress={this.props.onPressRightButton}
               style={{
                 height: 40,
                 borderColor: Button_BG_COLOR,

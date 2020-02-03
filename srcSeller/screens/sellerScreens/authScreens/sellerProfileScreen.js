@@ -35,7 +35,11 @@ export default class SellerProfileScreen extends Component {
           <CustomTextarea title={'Enter Address'} />
 
           <View style={{height: 40}} />
-          <CustomButton text={'SignUp'} width="85%" />
+          <CustomButton
+            text={'SignUp'}
+            width="85%"
+            onPress={() => this.props.navigation.navigate('SellerLoginScreen')}
+          />
           <View style={{height: 10}} />
         </Content>
       </Container>

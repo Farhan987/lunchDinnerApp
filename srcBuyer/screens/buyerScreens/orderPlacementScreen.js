@@ -11,6 +11,7 @@ import CustomButton from '../../components/customComponents/customButton';
 import CustomTextBox from '../../components/customComponents/customTextbox';
 import CustomText from '../../components/customComponents/customText';
 import CustomParallelButton from '../../components/customComponents/customParallelButton';
+import CustomTimePicker from '../../components/customComponents/CustomTimePicker';
 
 export default class OrderPlacementScreen extends Component {
   state = {
@@ -51,6 +52,8 @@ export default class OrderPlacementScreen extends Component {
           <CustomText description={'Halal'} iconName={'check'} />
 
           <CustomText description={'Vegetarian'} iconName={'yelp'} />
+
+          <CustomTimePicker />
 
           <CustomText description={'Farhan Akram'} iconName={'user'} />
 

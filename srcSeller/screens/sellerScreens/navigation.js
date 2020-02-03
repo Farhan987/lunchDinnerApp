@@ -15,7 +15,7 @@ import AllMealScreen from './allMealScreen';
 import MenuListScreen from './menuListScreen';
 import MenuDetailScreen from './menuDetailScreen';
 import MealDetailScreen from './mealDetailScreen';
-import SellerOrderScreen from './sellerOrderScreen';
+import SellerOrderScreen from './orderScreen';
 
 const AppDrawer = createDrawerNavigator(
   {
@@ -50,6 +50,7 @@ const SellerAuthSwitchNavigator = createSwitchNavigator(
     SellerProfileScreen: {screen: SellerProfileScreen},
     ForgetPasswordScreen: {screen: ForgetPasswordScreen},
     RecoverPasswordScreen: {screen: RecoverPasswordScreen},
+    SellerDrawerScreen: {screen: AppDrawer},
   },
   {
     initialRouteName: 'LoginScreen',

@@ -10,7 +10,7 @@ import CustomTextarea from '../../components/customComponents/customTextarea';
 import CustomCheckbox from '../../components/customComponents/customCheckbox';
 import CustomDropdown from '../../components/customComponents/customDropdown';
 
-export default class MealDetailScreen extends Component {
+export default class AddMealScreen extends Component {
   state = {toggleMode: false};
 
   toggle = () => {

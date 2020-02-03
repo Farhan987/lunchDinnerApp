@@ -34,7 +34,12 @@ export default class ForgetPasswordScreen extends Component {
         />
 
         <View style={{height: 30}} />
-        <CustomButton text="Reset Password" />
+        <CustomButton
+          text="Reset Password"
+          onPress={() =>
+            this.props.navigation.navigate('SellerRecoverPasswordScreen')
+          }
+        />
       </View>
     );
   }

@@ -22,7 +22,7 @@ export default class DrawerScreen extends Component {
               source={require('../../images/profile.png')}
             />
           </View>
-          <View style={[styles.viewStyle, {flex: 2}]}>
+          <View style={[styles.viewStyle, {flex: 1}]}>
             <Text style={{fontSize: LARGE, paddingTop: 2}}>Farhan Akram</Text>
           </View>
         </View>
@@ -30,45 +30,53 @@ export default class DrawerScreen extends Component {
           style={{height: 1, width: '100%', backgroundColor: Button_BG_COLOR}}
         />
         <DrawerComponent
+          onPressDrawerBar={() =>
+            this.props.navigation.navigate('SellerAllMealScreen')
+          }
           text="Meals"
           iconName="cutlery"
-          // navigation={this.props.navigation}
-          // onPress={() => this.props.navigation.navigate('EditProfileScreen')}
         />
         <View
           style={{height: 1, width: '100%', backgroundColor: Button_BG_COLOR}}
         />
         <DrawerComponent
+          onPressDrawerBar={() =>
+            this.props.navigation.navigate('SellerMenuListScreen')
+          }
           text="Menu"
           iconName="caret-square-o-down"
-          // navigation={this.props.navigation}
-          // onPress={() =>
-          //   this.props.navigation.navigate('ShippingAdressScreen')
-          // }
         />
         <View
           style={{height: 1, width: '100%', backgroundColor: Button_BG_COLOR}}
         />
         <DrawerComponent
+          onPressDrawerBar={() =>
+            this.props.navigation.navigate('SellerOrderScreen')
+          }
           text=" All Orders"
           iconName="list-ol"
-          // navigation={this.props.navigation}
-          // onPress={() => this.props.navigation.navigate('WishListScreen')}
         />
         <View
           style={{height: 1, width: '100%', backgroundColor: Button_BG_COLOR}}
         />
         <DrawerComponent
+          onPressDrawerBar={() =>
+            this.props.navigation.navigate('SellerEditInfoScreen')
+          }
           text="Profile"
           iconName="user"
-          // navigation={this.props.navigation}
-          // onPress={() => this.props.navigation.navigate('WishListScreen')}
         />
         <View
           style={{height: 1, width: '100%', backgroundColor: Button_BG_COLOR}}
         />
 
-        <DrawerComponent text=" Logout" iconName="sign-out" />
+        <DrawerComponent
+          text=" Logout"
+          iconName="sign-out"
+          onPressDrawerBar={() =>
+            this.props.navigation.navigate('SellerLoginScreen')
+          }
+        />
       </Container>
     );
   }

@@ -37,7 +37,12 @@ export default class RegisterScreen extends Component {
           <CustomTextBox placeholder="Confirm Password" showEye2 />
 
           <View style={{height: 30}} />
-          <CustomButton text="Continue" />
+          <CustomButton
+            text="Continue"
+            onPress={() =>
+              this.props.navigation.navigate('SellerProfileScreen')
+            }
+          />
         </ScrollView>
       </View>
     );
